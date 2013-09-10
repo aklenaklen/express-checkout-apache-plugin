@@ -65,14 +65,14 @@ Now simply go to `http://<your-server>/mod_paypal_ec_sample`. You'll see a "down
     $ mkdir /usr/tmp
     $ cd /usr/tmp
     
-    2. Download latest psc-commons from `https://github.paypal.com/ProfessionalServiceEngineering/psc-commons/archive/master.zip`
-    wget https://github.paypal.com/ProfessionalServiceEngineering/psc-commons/archive/master.zip
+    2. Download latest express-checkout-apache-plugin from `https://github.com/paypal/express-checkout-apache-plugin/archive/master.zip`
+    wget https://github.com/paypal/express-checkout-apache-plugin/archive/master.zip
     
     3. Unzip master.zip
     $ unzip master.zip
     
-    4. Go to the directory psc-commons-master/mod_paypal_ec/src and compile mod_paypal_ec.c
-    $ cd psc-commons-master/mod_paypal_ec/src
+    4. Go to the directory express-checkout-apache-plugin-master/src and compile mod_paypal_ec.c
+    $ cd express-checkout-apache-plugin-master/src
     $ apxs2 -c mod_paypal_ec.c 
     
     5. This will generate the libraries under ".libs" folder. Copy .libs/mod_paypal_ec.so to your Apache Modules directory (usually it is /usr/lib/apache2/modules)

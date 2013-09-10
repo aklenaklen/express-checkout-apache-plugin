@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CURR_DIR=`pwd`
-rm -rf psc-commons-master master.zip*
+rm -rf express-checkout-apache-plugin-master master.zip
 rm -rf out.log err.log
 
 echo "-----------------------------------------"
@@ -15,17 +15,17 @@ fi
  
 echo "-----------------------------------------"
 echo "Downloading latest mod_paypal_ec from github.paypal.com..."
-wget -a out.log https://github.paypal.com/ProfessionalServiceEngineering/psc-commons/archive/master.zip
+wget -a out.log https://github.com/paypal/express-checkout-apache-plugin/archive/master.zip
 if [ ! -f master.zip ]
 then
-	echo "Could not download http://github.paypal.com/ProfessionalServiceEngineering/psc-commons/archive/master.zip"
+	echo "Could not download https://github.com/paypal/express-checkout-apache-plugin/archive/master.zip"
 	exit
 fi
 
 echo "Unzipping tar ball..."
 unzip master.zip >> out.log
 
-if [ ! -d psc-commons-master/mod_paypal_ec/src ]
+if [ ! -d express-checkout-apache-plugin-master/src ]
 then
 	echo "Could not find mod_paypal_ec codebase in the tar ball"
 	exit
@@ -33,7 +33,7 @@ fi
 
 echo "-----------------------------------------"
 echo "Compiling the module..."
-cd psc-commons-master/mod_paypal_ec/src
+cd express-checkout-apache-plugin-master/src
 apxs2 -c mod_paypal_ec.c 
 
 APACHE_MODULES_DIR=/usr/lib/apache2/modules
