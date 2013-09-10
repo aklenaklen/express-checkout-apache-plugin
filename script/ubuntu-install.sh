@@ -14,7 +14,7 @@ then
 fi
  
 echo "-----------------------------------------"
-echo "Downloading latest mod_paypal_ec from github.paypal.com..."
+echo "Downloading latest mod_paypal_ec from github.com..."
 wget -a out.log https://github.com/paypal/express-checkout-apache-plugin/archive/master.zip
 if [ ! -f master.zip ]
 then
