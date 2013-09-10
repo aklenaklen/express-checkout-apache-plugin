@@ -7,7 +7,7 @@
 
 > IMPORTANT NOTICE:
 
-> This plugin is currently being provided "just as a sample" to show how Apache Web Server can be set up to automatically trigger PayPal Express Checkout flow for certain URIs. Pending issues in this plugin are being tracked via github issues.
+> This plugin is currently being provided "just as a sample" to show how Apache Web Server can be set up to automatically trigger PayPal Express Checkout flow for certain URIs. Pending issues in this plugin are being tracked via github issues at `https://github.com/paypal/express-checkout-apache-plugin/issues`
 
 ## Summary
 This module uses the concept of basic authentication to make URIs accessible only after the user has "paid". When a user clicks on a URI such as a download link of a digital resource, he/she is redirected to PayPal and is required to complete payment. Once payment is successful, the digital resource is then made available to the user.
